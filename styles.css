@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.3fr 1fr;
+    grid-template-areas: 
+        "nav nav nav nav"
+        "sidebar main main main"
+        "sidebar form form form"
+        "footer footer footer footer"
+    ;
+    height: 100vh;
+}
+nav{
+    background-color: rgb(224, 237, 133);
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(199, 239, 199);
+}
+.main{
+    grid-area: main;
+    background-color: rgb(193, 193, 244);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form{
+    grid-area: form;
+    background-color: rgb(201, 230, 168);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0px;
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(156, 151, 151);
+    text-align: center;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav a{
+    color: rgb(67, 199, 232);
+    text-decoration: none;
+}
+nav a:hover{
+    color: red;
+}
+ul{
+    list-style: none;
+}
+li{
+    color: #e8e1e1;
+}
+.sidebar ul li{
+    color: rgb(225, 16, 16);
+    padding: 10px 10px;
+    margin-top: 20px;
+    border: 0.5px solid gray;
+    cursor: pointer;
+}
+.sidebar ul li:hover{
+    background-color: gray;
+    color: #fff;
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    margin: 1px;
+}
